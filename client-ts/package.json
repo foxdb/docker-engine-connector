@@ -1,0 +1,19 @@
+{
+  "name": "client-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "ts-node test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.19",
+    "@types/request-promise": "^4.1.42",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.2.4"
+  },
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}

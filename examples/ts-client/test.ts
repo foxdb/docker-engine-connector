@@ -14,8 +14,8 @@ const requestOptions = () => ({
   timeout: 6000,
   rejectUnauthorized: false, // needed if using a self-signed certificate
   pool: new https.Agent(),
-  cert: fs.readFileSync('../client-cert/docker-daemon-client.pem'),
-  key: fs.readFileSync('../client-cert/docker-daemon-client.key')
+  cert: fs.readFileSync('../../client-cert/docker-daemon-client.pem'),
+  key: fs.readFileSync('../../client-cert/docker-daemon-client.key')
 })
 
 const makeAuthenticatedCall = () => {

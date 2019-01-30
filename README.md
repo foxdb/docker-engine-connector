@@ -15,6 +15,6 @@ curl 'https://localhost:2376/info' --capath ./server-cert/docker-daemon-server.c
 
 ### with a Typescript client
 
-Example code for a typescript client is given in `client-ts`.
+Example code for a typescript client is given in `examples/ts-client`.
 
-`yarn && yarn test` in the `client-ts` directory will run a test request against the local swarm, authenticated with the generated certs.
+`yarn && yarn test` in the `examples/ts-client` directory will run a test request against the local swarm, authenticated with the generated certs.

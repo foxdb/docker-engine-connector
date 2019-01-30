@@ -10,7 +10,7 @@
 ### with cURL
 
 ```bash
-curl 'https://localhost:2376/info' --capath ./server-cert/docker-daemon-server.crt --cert ./client-cert/docker-daemon-client.pem -k
+curl 'https://localhost:2376/info' --cert ./client-cert/docker-daemon-client.pem -k
 ```
 
 ### with a Typescript client

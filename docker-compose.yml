@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  docker_api_agent:
+    image: alpine/socat
+    ports:
+      - 2376:2376
+    entrypoint: socat OPENSSL-LISTEN:2376,fork,reuseaddr,cert=/run/secrets/docker_daemon_server_pem,cafile=/run/secrets/docker_daemon_client_crt UNIX:/var/run/docker.sock
+    secrets:
+      - docker_daemon_server_pem
+      - docker_daemon_client_crt
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      placement:
+        constraints:
+          - node.role == manager
+
+secrets:
+  docker_daemon_client_crt:
+    external: true
+  docker_daemon_server_pem:
+    external: true
